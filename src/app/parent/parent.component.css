@@ -1,0 +1,13 @@
+.parent{
+    border: black 1px solid;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
+.child-label{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}

@@ -1,0 +1,31 @@
+p{
+    border:0px;
+    font-size: 200px;
+    padding: 100px;
+    margin:auto;
+    color: slategrey;
+    
+}
+
+p,button{
+    display: inline-block;
+}
+
+button{
+    background-color: cadetblue;
+    padding: 15px;
+    color: white;
+    border: white 1px solid;
+    font-size: 20px;    
+}
+
+.counter {
+    border: black 1px solid;
+    position: relative;
+}
+
+.child-label{
+    position: absolute;
+    top: 100px;
+    right: 10px;
+}

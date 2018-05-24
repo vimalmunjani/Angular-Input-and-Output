@@ -1,0 +1,53 @@
+when a new component is created, selector tag is used which is used to create a custom HTML tag.
+
+Now to use this component, the tag has to be used somewhere, obviously where ever it is used is the container(parent component)
+of the component we made(custom/child component)
+
+Hence in the template of the parent component there is a tag which displays our child component 
+
+Let Parent component - <parent></parent>
+Let Child compoenent - <child></clild>
+
+so the embeded will look like-
+<parent>
+<child></child>
+</parent>
+
+There comes the need to pass data from the parent to the child component,
+which can be done using the @Input decorator inside the child component class,
+Hence child component should know before hand what data can be inputed and the name of the variable.
+
+Child component will look like -
+------------------------------------------------------------------------------
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'child',
+  template: ``,
+  styleUrls: []
+})
+export class ChildComponent {
+
+  @Input()
+  childMessage: string;
+
+  constructor() { }
+
+}
+--------------------------------------------------------------------------------
+
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-parent',
+  template: `
+    <app-child [childMessage]="parentMessage"></app-child>
+  `,
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent{
+  parentMessage = "message from parent"
+  constructor() { }
+}
